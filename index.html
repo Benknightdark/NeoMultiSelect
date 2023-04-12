@@ -14,12 +14,10 @@
     />
   </head>
   <body>
-    <div class="ui-widget">
-      <div class="ui-widget-content">
-        <label>Part Number</label>
-        <input type="text" id="part_numbers1" />
-      </div>
-    </div>
+    <label for="search-input">Search:</label>
+    <input type="text" id="search-input">
+    <div id="search-tags"></div>
+    
   </body>
   <script
     src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
@@ -38,7 +36,6 @@
     (async($,window,document)=>{
         const multiSelectHelper=await import('./lib/neoMultiSelect.js')
         await multiSelectHelper.init();
-
     })($,window,document)
   </script>
 </html>
